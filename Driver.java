@@ -4,30 +4,29 @@ public class Driver
 	{
 		Deck d1 = new Deck();
 		d1.shuffle();
-		d1.printDeck();
 
 		Card c1 = d1.dealCard();
-
 		Card c2 = d1.dealCard();
 
-		Card c3 = d1.dealCard();
+		//Card c3 = d1.dealCard();
 	
-		Card c4 = d1.dealCard();
+		//Card c4 = d1.dealCard();
 
-		Card c5 = d1.dealCard();
+		//Card c5 = d1.dealCard();
 	
-		Hand h1 = new Hand();
-		h1.addCard(c1);
-		h1.addCard(c2);
-		h1.addCard(c3);
-		h1.addCard(c4);
-		h1.addCard(c5);
+		BlackjackHand bjh1 = new BlackjackHand();
+		bjh1.addCard(c1);
+		bjh1.addCard(c2);
+		// bjh1.addCard(c3);
+		// bjh1.addCard(c4);
+		//bjh1.addCard(c5);
 
-		System.out.println("Before sorting: " + h1.hand);
-		h1.sortBySuit();
-		System.out.println("After sorting: " + h1.hand);
-		h1.sortByValue();
-		System.out.println("After sorting again: " + h1.hand);
+		// System.out.println("Before sorting: " + bjh1.hand);
+		// bjh1.sortBySuit();
+		// System.out.println("After sorting: " + bjh1.hand);
+		bjh1.sortByValue();
+		System.out.println("After sorting again: " + bjh1.hand);
 
+		System.out.println(bjh1.getBlackjackValue());
 	}	
 }
