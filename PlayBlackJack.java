@@ -1,4 +1,4 @@
-public class Driver
+public class PlayBlackJack 
 {
 	public static void main(String[] args)
 	{
@@ -8,25 +8,18 @@ public class Driver
 		Card c1 = d1.dealCard();
 		Card c2 = d1.dealCard();
 
-		//Card c3 = d1.dealCard();
-	
-		//Card c4 = d1.dealCard();
-
-		//Card c5 = d1.dealCard();
-	
 		BlackjackHand bjh1 = new BlackjackHand();
 		bjh1.addCard(c1);
 		bjh1.addCard(c2);
-		// bjh1.addCard(c3);
-		// bjh1.addCard(c4);
-		//bjh1.addCard(c5);
 
-		// System.out.println("Before sorting: " + bjh1.hand);
-		// bjh1.sortBySuit();
-		// System.out.println("After sorting: " + bjh1.hand);
 		bjh1.sortByValue();
 		System.out.println("After sorting again: " + bjh1.hand);
+		System.out.println(bjh1.getBlackjackValue());
 
+		bjh1.hit(d1);
+
+		bjh1.sortByValue();
+		System.out.println("After sorting again: " + bjh1.hand);
 		System.out.println(bjh1.getBlackjackValue());
 	}	
 }

@@ -1,3 +1,0 @@
-You need to add the for loop and if condition to 
-BlackjackHand.java. Right now, you are just adding 
-the value of all the cards. You need to change that.

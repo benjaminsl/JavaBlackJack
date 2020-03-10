@@ -47,4 +47,11 @@ public class BlackjackHand extends Hand
 
 			return valueOfHand;
 	}  // end getBlackjackValue()	
+
+	public void hit(Deck deck)
+	{
+		Card newCard = deck.dealCard();
+		this.addCard(newCard);
+	} // end hit
+
 } // end class BlackjackHand

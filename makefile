@@ -2,12 +2,12 @@ all:
 	cls
 	javac Card.java
 	javac Deck.java
-	javac Driver.java
+	javac PlayBlackJack.java
 	javac Hand.java
 	javac BlackjackHand.java
-	java Driver
+	java PlayBlackJack 
 
 hand:
 	javac Hand.java
 	javac BlackjackHand.java
-	java Driver
+	java PlayBlackJack 
