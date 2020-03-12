@@ -6,6 +6,9 @@
 
 public class BlackjackHand extends Hand
 {
+	private boolean dealer = false;	
+	private String whoseHand;
+
 	public int getBlackjackValue()
 	{
 			// Returns the value of this hand
@@ -51,15 +54,53 @@ public class BlackjackHand extends Hand
 	public String handStatus()
 	{
 		this.sortByValue();	
-		return ("Your hand: " + this.hand + "\n" +
+	
+		if (this.whoseHand == "Player")
+		{	
+			return ("Your hand: " + this.hand + "\n" +
 					 "Your hand's value is " + this.getBlackjackValue() + ".");
-	}
+		}	
+
+		if (this.whoseHand == "Dealer")
+		{	
+			return ("Dealer's hand: " + this.hand + "\n" +
+					 "Dealer's hand value is " + this.getBlackjackValue() + ".");
+		}
+		
+		else
+		{
+			return ("Hand: " + this.hand + "\n" +
+					 "Hand's value is " + this.getBlackjackValue() + ".");
+		}	
+
+	} // end handStatus()
 
 	public void hit(Deck deck)
 	{
 		Card newCard = deck.dealCard();
 		this.addCard(newCard);
 	} // end hit
+
+	// make this hand the hand of the dealer
+	public void makeDealer()
+	{
+		this.dealer = true;
+	}
+
+	public boolean checkIfDealer()
+	{
+		return this.dealer;
+	}
+		
+	public void setWhoseHand(String name)
+	{
+		this.whoseHand = name;	
+	}
+		
+	public String getWhoseHand()
+	{
+		return this.whoseHand;
+	}
 
 } // end class BlackjackHand
 

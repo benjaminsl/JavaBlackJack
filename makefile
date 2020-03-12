@@ -2,9 +2,9 @@ all:
 	cls
 	javac Card.java
 	javac Deck.java
-	javac PlayBlackJack.java
 	javac Hand.java
 	javac BlackjackHand.java
+	javac PlayBlackJack.java
 	java PlayBlackJack 
 
 hand:
