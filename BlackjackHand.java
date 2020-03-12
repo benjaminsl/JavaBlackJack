@@ -48,6 +48,13 @@ public class BlackjackHand extends Hand
 			return valueOfHand;
 	}  // end getBlackjackValue()	
 
+	public String handStatus()
+	{
+		this.sortByValue();	
+		return ("Your hand: " + this.hand + "\n" +
+					 "Your hand's value is " + this.getBlackjackValue() + ".");
+	}
+
 	public void hit(Deck deck)
 	{
 		Card newCard = deck.dealCard();
@@ -55,3 +62,25 @@ public class BlackjackHand extends Hand
 	} // end hit
 
 } // end class BlackjackHand
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
