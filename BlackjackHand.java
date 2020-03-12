@@ -101,6 +101,11 @@ public class BlackjackHand extends Hand
 	{
 		return this.whoseHand;
 	}
+		
+	public void showFirstCard()
+	{
+		System.out.println(this.hand.get(0));
+	}
 
 } // end class BlackjackHand
 

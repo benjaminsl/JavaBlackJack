@@ -11,3 +11,7 @@ hand:
 	javac Hand.java
 	javac BlackjackHand.java
 	java PlayBlackJack 
+
+driver:
+	javac PlayBlackJack.java
+	java PlayBlackJack
